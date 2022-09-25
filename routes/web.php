@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 //Perguntas
+Route::get('/home', 'InterativaController@home')->name('home');
 Route::get('/exercicios', 'InterativaController@exercicios')->name('exercicios');
 Route::get('/desafio/desenvolvimento', 'InterativaController@desafioDesenvolvimento')->name('desafioDesenvolvimento');
 Route::get('/desafio/desenvolvimento/exercicio/{id}', 'InterativaController@exerciciodesenvolvimento')->name('exerciciodesenvolvimento');

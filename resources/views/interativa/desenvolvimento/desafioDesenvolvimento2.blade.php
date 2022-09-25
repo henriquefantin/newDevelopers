@@ -17,8 +17,6 @@
 
 @section('scripts')
     <script>
-        $(".abrirEditor").fadeOut();
-        
         $(".btnConsole").click(function(){
             $(".abrirEditor").fadeIn();
         });

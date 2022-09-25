@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class InterativaController extends Controller
 {
+    function home() {
+        return view('principal/home');
+    }
+
     function exercicios() {
         return view('interativa/exercicios');
     }
