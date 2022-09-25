@@ -1,0 +1,57 @@
+body {
+    background-color: rgba(0, 0, 0, 0.867);
+    font-weight: 600;
+}
+
+nav {
+    background: none !important;
+    text-transform: uppercase;
+
+    li {
+        margin-left: 3em;
+        margin-right: 3em;
+
+        a {
+            transition: .5s color ease-in-out;
+        }
+    }
+}
+
+.page-title {
+    opacity: .75 !important;
+}
+
+.semLinkBCO {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+span,
+a,
+p,
+i,
+h1 {
+    color: #ffffff !important;
+}
+
+.alinharEsquerda {
+    text-align: left !important;
+}
+
+.alinharCentro {
+    text-align: center !important;
+}
+
+.exercicioPrincipal {
+    font-size: 200% !important;
+}
+
+.containerAjustado {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-dark-2 {
+    color: #fff;
+    border-color: #ffffff;
+}
