@@ -83,7 +83,7 @@ const resetCodeBtn = document.querySelector('.editor__reset');
 
 // Setup Ace
 let codeEditor = ace.edit("editorCode");
-let defaultCode = 'console.log("Hello World!")';
+let defaultCode = '';
 let consoleMessages = [];
 
 let editorLib = {

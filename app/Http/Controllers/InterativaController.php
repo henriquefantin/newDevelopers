@@ -18,7 +18,23 @@ class InterativaController extends Controller
         return view('interativa/desafioDesenvolvimento');
     }
 
-    function exerciciodesenvolvimento($id) {
+    function exercicioDesenvolvimento($id) {
         return view('interativa/desenvolvimento/desafioDesenvolvimento'.$id);
+    }
+
+    function multiplaEscolha() {
+        return view('interativa/multiplaEscolha');
+    }
+
+    function exercicioMultiplaEscolha($id) {
+        return view('interativa/multiplaEscolha/exeMPE'.$id);
+    }
+
+    function desafioDescritivo() {
+        return view('interativa/descritivos');
+    }
+
+    function exercicioDescritivo($id) {
+        return view('interativa/descritivo/desafioDescritivo'.$id);
     }
 }

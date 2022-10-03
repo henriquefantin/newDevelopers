@@ -14,11 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('principal/principal');
+    return view('principal/home');
 });
 
 //Perguntas
 Route::get('/home', 'InterativaController@home')->name('home');
 Route::get('/exercicios', 'InterativaController@exercicios')->name('exercicios');
+
+//Desenvolvimento
 Route::get('/desafio/desenvolvimento', 'InterativaController@desafioDesenvolvimento')->name('desafioDesenvolvimento');
-Route::get('/desafio/desenvolvimento/exercicio/{id}', 'InterativaController@exerciciodesenvolvimento')->name('exerciciodesenvolvimento');
+Route::get('/desafio/desenvolvimento/exercicio/{id}', 'InterativaController@exercicioDesenvolvimento')->name('exercicioDesenvolvimento');
+
+//Multipla Escolha
+Route::get('/desafio/multiplaEscolha', 'InterativaController@multiplaEscolha')->name('multiplaEscolha');
+Route::get('/desafio/multiplaEscolha/exercicio/{id}', 'InterativaController@exercicioMultiplaEscolha')->name('exercicioMultiplaEscolha');
+
+//Descritivos
+Route::get('/desafio/descritivo', 'InterativaController@desafioDescritivo')->name('desafioDescritivo');
+Route::get('/desafio/descritivo/exercicio/{id}', 'InterativaController@exercicioDescritivo')->name('exercicioDescritivo');

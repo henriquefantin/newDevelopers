@@ -55,3 +55,23 @@ h1 {
     color: #fff;
     border-color: #ffffff;
 }
+
+.mar-5 {
+    margin: 5px;
+}
+
+.mar-10 {
+    margin: 10px;
+}
+
+.mar-left-perc-5 {
+    margin-left: 5%;
+}
+
+.mar-left-perc-10 {
+    margin-left: 10%;
+}
+
+.estavel {
+    display: block;
+}

@@ -16,7 +16,7 @@
     </div>
 @else
     <div class="hoverable alinharEsquerda">
-        <a class="semLinkBCO" href="{{ route('exerciciodesenvolvimento', ['id' => 1]) }}">
+        <a class="semLinkBCO" href="{{ route('exercicioDesenvolvimento', ['id' => 1]) }}">
             <p>
                 1) Uma empresa quer verificar se um empregado está qualificado para a
                 aposentadoria ou não. Para estar em condições, basta um das seguintes opções
@@ -30,7 +30,7 @@
     </div>
     <br>
     <div class="hoverable alinharEsquerda">
-        <a class="semLinkBCO" href="{{ route('exerciciodesenvolvimento', ['id' => 2]) }}">
+        <a class="semLinkBCO" href="{{ route('exercicioDesenvolvimento', ['id' => 2]) }}">
             <p>2) Faça um algoritimo que trate/leia 8 valores e escreva o maior e o menor dentre eles.</p>
         </a>
     </div>
