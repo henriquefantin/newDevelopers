@@ -1,4 +1,6 @@
-let console = (function (oldConsole) {
+var resultadoExec;
+
+var console = (function (oldConsole) {
     return {
         formatArgsOutput: function (arg) {
             let outputArgMessage;
@@ -54,7 +56,18 @@ let console = (function (oldConsole) {
                 class: `log log--${this.getType(logItem)}`
             });
 
+            resultadoExec = logItem;
+
             oldConsole.log(consoleMessages);
+        },
+        printResultado: function (logItem) {
+            oldConsole.log(logItem);
+            consoleMessagesResultado.push({
+                message: this.formatArgsOutput(logItem),
+                class: `log log--${this.getType(logItem)}`
+            });
+
+            oldConsole.log(consoleMessagesResultado);
         },
         log: function (text) {
             let argsArray = Array.from(arguments);
@@ -82,11 +95,12 @@ const executeCodeBtn = document.querySelector('.editor__run');
 const resetCodeBtn = document.querySelector('.editor__reset');
 
 // Setup Ace
-let codeEditor = ace.edit("editorCode");
-let defaultCode = '';
-let consoleMessages = [];
+var codeEditor = ace.edit("editorCode");
+var defaultCode = '';
+var consoleMessages = [];
+var consoleMessagesResultado = [];
 
-let editorLib = {
+var editorLib = {
     clearConsoleScreen() {
         consoleMessages.length = 0;
 
@@ -107,6 +121,20 @@ let editorLib = {
 
             consoleLogList.appendChild(newLogItem);
         })
+    },
+    statusResultado() {
+        consoleMessagesResultado.forEach(log => {
+            const newLogResultado = document.createElement('li');
+            const newLogTextResultado = document.createElement('pre');
+
+            newLogTextResultado.className = log.class;
+            newLogTextResultado.textContent = `> ${log.message}`;
+
+            newLogResultado.appendChild(newLogTextResultado);
+
+            consoleLogList.appendChild(newLogResultado);
+        })
+        consoleMessagesResultado = [];
     },
     init() {
         // Configure Ace

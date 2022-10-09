@@ -13,19 +13,19 @@
         <p>
             <input type="radio" value="1" id="radio1">
             <span>
-                <img src="{{ asset('imgs/exe2/exercMultiplaEscolhaA.png') }}" class="mar-5">
+                <img src="{{ asset('imgs/multiplaEscolha/exe2/exercMultiplaEscolhaA.png') }}" class="mar-5">
             </span>
         </p>
         <p>
             <input type="radio" value="2" id="radio2">
             <span>
-                <img src="{{ asset('imgs/exe2/exercMultiplaEscolhaB.png') }}" class="mar-5">
+                <img src="{{ asset('imgs/multiplaEscolha/exe2/exercMultiplaEscolhaB.png') }}" class="mar-5">
             </span>
         </p>
         <p>
             <input type="radio" value="3" id="radio3">
             <span>
-                <img src="{{ asset('imgs/exe2/exercMultiplaEscolhaC.png') }}" class="mar-5">
+                <img src="{{ asset('imgs/multiplaEscolha/exe2/exercMultiplaEscolhaC.png') }}" class="mar-5">
             </span>
         </p>
         <p>

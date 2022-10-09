@@ -9,7 +9,7 @@
         </p>
     </div>
     <div class="mar-5 mar-left-perc-10">
-        <img src="{{ asset('imgs/exe1/exercMultiplaEscolha1.png') }}" alt="">
+        <img src="{{ asset('imgs/multiplaEscolha/exe1/exercMultiplaEscolha1.png') }}" alt="">
     </div>
     <div>
         <p>

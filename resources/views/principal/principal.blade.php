@@ -60,6 +60,7 @@
               <div class="editor__footer--left">
                 <button type="button" class="btn btn-light editor__btn editor__run">Executar</button>
                 <button type="button" class="btn btn-light editor__btn editor__reset">Limpar</button>
+                <button type="button" class="btn btn-light editor__btn btnCheck">Verificar Resposta</button>
               </div>
             </div>
             <div class="col">

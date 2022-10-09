@@ -30,7 +30,11 @@ span,
 a,
 p,
 i,
-h1 {
+h1,
+h4,
+h5,
+th,
+td {
     color: #ffffff !important;
 }
 
