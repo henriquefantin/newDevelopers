@@ -1,57 +1,47 @@
-@extends('adminArea')
-@section('conteudoAdmArea')
+@extends('principal.principal')
+@section('conteudo')
 
-<div class="card">
-    <div class="card-body">
-        <form name="formCadastroAdministrativo" class="row g-3" method="POST" action="{{ route('salvarCadastroAdm') }}">
-            @csrf
+<br>
+<br>
+<br>
 
-            <strong class="d-block h6 mt-5 mb-2 pb-2 border-bottom divider">Informações de acesso</strong>
-            <div class="col-md-4">
-                <label for="usernameAdm" class="form-label">Username</label>
-                <div class="input-group"> 
-                    <input type="text" class="form-control campoObrigatorio" id="usernameAdm" name="usernameAdm"> 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST" action="{{ route('salvarRegistro') }}">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-3 col-form-label text-md-right">E-Mail</label>
+                            <div class="col-md-8">
+                                <input type="email" class="form-control" id="email" name="email"> 
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="password" class="col-md-3 col-form-label text-md-right">Senha</label>
+                            <div class="col-md-8">
+                                <input type="password" class="form-control" id="password" name="password" autocomplete="new-password"> 
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <button class="btn btn-success" type="submit" id="btnEnviarForm" name="btnEnviarForm">
+                                {{ __('Registrar') }}
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-
-            <div class="col-md-8">
-                <label for="email" class="form-label">E-Mail</label>
-                <div class="input-group">
-                    <input type="text" class="form-control campoObrigatorio" id="email" name="email"> 
-                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <label for="password">Senha</label>
-                <div class="input-group has-validation">
-                <input type="password" class="form-control campoObrigatorio" id="password" name="password" autocomplete="new-password"> 
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="confirmPassword">Confirmar Senha</label>
-                <div class="input-group has-validation">
-                <input type="password" class="form-control campoObrigatorio" id="confirmPassword" name="confirmPassword"> 
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="phone" class="form-label">Telefone/Celular</label>
-                <input type="text" class="form-control" id="phone" name="phone" value=""> 
-            </div>
-
-            <div class="col-12">
-                <button class="btn btn-success" type="button" id="btnEnviarForm" name="btnEnviarForm">Enviar Formulario</button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 @endsection
 
-
 @section('css')
     <style>
       .card{
-        background-color: #fff;
         border: 0;
       }
 
@@ -59,11 +49,6 @@
         border: 1px solid #ced4da8e !important;
         border-radius: 0.18rem;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,.15);
-      }
-
-      .divider{
-        width: 96%;
-        margin-left: 2%;
       }
     </style>
 @endsection

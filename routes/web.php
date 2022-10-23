@@ -32,3 +32,10 @@ Route::get('/desafio/multiplaEscolha/exercicio/{id}', 'InterativaController@exer
 //Descritivos
 Route::get('/desafio/descritivo', 'InterativaController@desafioDescritivo')->name('desafioDescritivo');
 Route::get('/desafio/descritivo/exercicio/{id}', 'InterativaController@exercicioDescritivo')->name('exercicioDescritivo');
+
+/* Login */
+Route::get('/login', 'AppController@tela_login')->name('login');
+Route::post('/logar', 'AppController@login')->name('logar');
+Route::get('/register', 'AppController@tela_cadastro')->name('register');
+Route::post('/salvarRegistro', 'AppController@adicionar')->name('salvarRegistro');
+Route::get('/logout', 'AppController@logout')->name('logout');
