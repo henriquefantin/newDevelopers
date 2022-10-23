@@ -39,3 +39,7 @@ Route::post('/logar', 'AppController@login')->name('logar');
 Route::get('/register', 'AppController@tela_cadastro')->name('register');
 Route::post('/salvarRegistro', 'AppController@adicionar')->name('salvarRegistro');
 Route::get('/logout', 'AppController@logout')->name('logout');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

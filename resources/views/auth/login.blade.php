@@ -71,7 +71,6 @@
       .card{
         border: 0;
       }
-
       .form-control{
         border: 1px solid #ced4da8e !important;
         border-radius: 0.18rem;

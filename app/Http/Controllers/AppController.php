@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Auth;
 
 class AppController extends Controller
 {
@@ -27,34 +28,27 @@ class AppController extends Controller
 
         if ($usuario_login->save()){
             $msg = "Usuário '" . $email . "' adicionado com sucesso.";
+            return redirect('/login')->with('mensagemAlertSuccess', $msg);
         } else {
             $msg = "Usuário não foi cadastrado.";
+            return redirect('/register')->with('mensagemAlertDanger', $msg);
         }
-
-        return view("retorno", [ "mensagem" => $msg ]);
     }
 
     function login(Request $req){
     	//Comparar usuário e senha
-    	$login = $req->input('login');
-    	$senha = $req->input('senha');
+    	$email = $req->input('email');
+    	$senha = $req->input('password');
 
-    	$usuario_login = User::where('login', '=', $login)->first();
+    	$usuario_login = User::where('email', '=', $email)->first();
     	// $usuario terá null ou os dados do usuario encontrado
 
-    	if ($usuario_login and $usuario_login->senha == $senha){
-    		//se nao é null, entra aqui
-    		//login e senha estão certos
-
-            $variavel = [
-                "login" => $login,
-                "nome" => $usuario_login->nome
-            ];
-            session($variavel);
-
-    		return redirect()->route('listar');
+    	if ($usuario_login && $usuario_login->password == $senha){
+    		$msg = "Olá " . $email;
+            return redirect('/home')->with('mensagemAlertSuccess', $msg);
     	} else {
-    		return view("retorno", ["mensagem" => "Usuário ou senha inválidos."]);
+    		$msg = "Usuário ou senha inválidos.";
+            return redirect('/login')->with('mensagemAlertDanger', $msg);
     	}
     }
 

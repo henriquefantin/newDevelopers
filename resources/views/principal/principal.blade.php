@@ -22,19 +22,17 @@
     <div class="containerAjustado">
       <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <form class="d-flex">
-                <button class="btn btn-outline-success me-2" type="submit">Search</button>
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-              </form>
-            </div>
             <ul class="nav navbar-nav">
               <li class="nav-item"><a id="len2" class="nav-link hoverable semLinkBCO" href="{{ route('home') }}">Home</a></li>
               <li class="nav-item"><a id="len3" class="nav-link hoverable semLinkBCO" href="{{ route('exercicios') }}">Exercícios</a></li>
               <li class="nav-item"><a id="len4" class="nav-link hoverable semLinkBCO" href="#">Sobre</a></li>
               <li class="nav-item"><a id="len5" class="nav-link hoverable semLinkBCO" href="#">Contato</a></li>
-              <li class="nav-item"><a id="len0" class="nav-link hoverable semLinkBCO" href="{{ route('login') }}">Login</a></li>
+              @guest
+              <li class="nav-item"><a id="len0" class="nav-link hoverable semLinkBCO" href="{{ route('login') }}">Entrar</a></li>
               <li class="nav-item"><a id="len1" class="nav-link hoverable semLinkBCO" href="{{ route('register') }}">Registrar</a></li>
+              @else
+              <li class="nav-item"><a id="len1" class="nav-link hoverable semLinkBCO" href="{{ route('logout') }}">Sair</a></li>
+              @endguest
             </ul>
           </div>
       </nav>
