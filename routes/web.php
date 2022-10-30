@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('principal/home');
+    return view('/home');
 });
 
 //Perguntas
@@ -32,6 +32,9 @@ Route::get('/desafio/multiplaEscolha/exercicio/{id}', 'InterativaController@exer
 //Descritivos
 Route::get('/desafio/descritivo', 'InterativaController@desafioDescritivo')->name('desafioDescritivo');
 Route::get('/desafio/descritivo/exercicio/{id}', 'InterativaController@exercicioDescritivo')->name('exercicioDescritivo');
+
+//Salvar
+Route::post('/exercicio/salvar', 'FormController@salvarExercicio')->name('salvarExercicio');
 
 /* Login */
 Route::get('/login', 'AppController@tela_login')->name('login');

@@ -8,7 +8,7 @@ use Auth;
 class InterativaController extends Controller
 {
     function home() {
-        return view('principal/home');
+        return view('/home');
     }
 
     function exercicios() {
