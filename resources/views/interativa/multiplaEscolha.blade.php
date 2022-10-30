@@ -21,7 +21,7 @@
                 1) Analise o algoritmo e diga o que será impresso na tela ao ser executado:
             </p>
             <div class="text-center mar-10">
-                <img src="{{ asset('imgs/exe1/exercMultiplaEscolha1.png') }}" alt="">
+                <img src="{{ asset('imgs/multiplaEscolha/exe1/exercMultiplaEscolha1.png') }}" alt="">
             </div>
         </a>
     </div>
