@@ -4,7 +4,7 @@
 <br><br>
 <form name="form" id="form" method="POST" action="{{ route('salvarExercicio') }}">
     @csrf
-    <input type="hidden" name="tipoExercicio" id="tipoExercicio" value="1">
+    <input type="hidden" name="tipoExercicio" id="tipoExercicio" value="3">
     <input type="hidden" name="exercicio" id="exercicio" value="1">
     <input type="hidden" name="resposta" id="resposta" value="">
     <input type="hidden" name="codigoExe" id="codigoExe" value="">
@@ -265,7 +265,7 @@
                 resposta = "Resposta incorreta!";
             }
 
-            console.printResultado(console);
+            console.printResultado(resposta);
             editorLib.statusResultado();
         });
         
