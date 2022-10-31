@@ -49,12 +49,14 @@ class FormController extends Controller
                 $msg = $msg . "Exercício não foi cadastrada.";
             }
         } else if ($tipoExercicio == 3) {
+            $resposta = $req->input('resposta');
+            $codigoExe = $req->input('codigoExe');
             
             $desenvolvimento = new Desenvolvimento();
             $desenvolvimento->idUser = $coduser;
             $desenvolvimento->exercicio = $exercicio;
-            //$desenvolvimento->resposta = $resposta;
-            //$desenvolvimento->codigoDesenvolvido = $codigoDesenvolvido;
+            $desenvolvimento->resposta = $resposta;
+            $desenvolvimento->codigoDesenvolvido = $codigoExe;
             
             if($desenvolvimento->save()){
                 $msg = $msg . "Exercício enviado com sucesso.";
@@ -63,6 +65,6 @@ class FormController extends Controller
             }
         }
 
-        return redirect('/')->with('mensagemAlertSuccess', $msg);
+        return redirect('/exercicios')->with('mensagemAlertSuccess', $msg);
     }
 }

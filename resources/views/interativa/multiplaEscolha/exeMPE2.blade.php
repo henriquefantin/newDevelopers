@@ -3,6 +3,7 @@
 
 <br><br>
 <form name="form" id="form" method="POST" action="{{ route('salvarExercicio') }}">
+    @csrf
     <input type="hidden" name="tipoExercicio" id="tipoExercicio" value="1">
     <input type="hidden" name="exercicio" id="exercicio" value="2">
     <input type="hidden" name="valorRadio" id="valorRadio" value="">
