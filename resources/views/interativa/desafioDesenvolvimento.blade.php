@@ -29,11 +29,11 @@
         </a>
     </div>
     <br>
-    <div class="hoverable alinharEsquerda">
+    {{-- <div class="hoverable alinharEsquerda">
         <a class="semLinkBCO" href="{{ route('exercicioDesenvolvimento', ['id' => 2]) }}">
             <p>2) Faça um algoritimo que trate/leia 8 valores e escreva o maior e o menor dentre eles.</p>
         </a>
-    </div>
+    </div> --}}
 @endif
 
 @yield('desafio')
