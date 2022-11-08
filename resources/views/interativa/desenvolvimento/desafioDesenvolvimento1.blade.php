@@ -29,12 +29,15 @@
             &nbsp;&nbsp;&nbsp;O operador NOT no JavaScript é representado pelo simbolo "!" e 
             ele realiza a inversão do resultado da operação. Exemplo: o resultado
             verdadeiro se torna falso ao inserir o simbolo na frente da operação.
-        </p>    
+        </p>
+
+        <br>
         <div class="mar-5 mar-left-perc-10">
             <img src="{{ asset('imgs/desenvolvimento/exe1/exe1.3.png') }}" alt="">
         </div>
-
         <br>
+
+        <h5>Tabela Verdade</h5>
         <table class="table table-striped">
             <tbody>
                 <tr>
@@ -155,11 +158,13 @@
         <p>
             &nbsp;&nbsp;&nbsp;Exemplo de definição de uma variável String e Int na imagem abaixo:
         </p>
+
+        <br>
         <div class="mar-5 mar-left-perc-10">
             <img src="{{ asset('imgs/desenvolvimento/exe1/exe1.2.png') }}" alt="">
         </div>
-
         <br>
+
         <h5>Estruturas condicionais (se)</h5>
         <p>
             &nbsp;&nbsp;&nbsp;Permite o algorítimo seguir por determinado caminho utilizando como 
@@ -171,19 +176,25 @@
         <p>
             &nbsp;&nbsp;&nbsp;Exemplo de uma estrutura condicional (SE) na imagem abaixo:
         </p>
+
+        <br>
         <div class="mar-5 mar-left-perc-10">
             <img src="{{ asset('imgs/desenvolvimento/exe1/exe1.1.png') }}" alt="">
         </div>
-
         <br>
+
         <h5>Sobre o exercício</h5>
         <p>
             &nbsp;&nbsp;&nbsp;Para o desenvolvimento do exercício abaixo é necessário utilizar as práticas informadas
-            anteriormente e desenvolver um algorítimo utilizando a lógica.
+            acima e desenvolver um algorítimo utilizando a lógica, de modo que atenda o exercício.
         </p>
         <p>
             &nbsp;&nbsp;&nbsp;Ao final do algoritimo é necessário utilizar o comando 'console.log(estadoAposentadoria);'
-            para retornar o resultado e saber se está correto.
+            e clicar em "Executar" para retornar o resultado do algoritimo. Após isso é possível verificar se o resultado
+            está correto clicando em "Verificar Resposta". 
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;Para enviar o formulário basta clicar no botão "Enviar".
         </p>
     </div>
 
@@ -238,7 +249,9 @@
                     + "\n"
                     + "//Para isso utilize os valores de retorno 'Está aposentado' ou 'Não está aposentado'."
                     + "\n"
-                    + "let estadoAposentadoria = '';";
+                    + "let estadoAposentadoria = '';"
+                    + "\n\n"
+                    + "//Bloco de código ...</>";
                 codeEditor.setValue(valorInicial);
             }
 
